@@ -172,7 +172,7 @@ class DecodeBase:
             Z85_Base85 = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ.-:+=^!/*?&<>()[]{}@%$#"
             encoded_base_tmp = encoded_base.translate(str.maketrans(Z85_Base85,Standard_Base85))
             process_decode(
-                base64.b85decode(encoded_base11).decode('utf-8', 'replace'),
+                base64.b85decode(encoded_base_tmp).decode('utf-8', 'replace'),
                 'Base85 Z85'
             )
         except: pass
